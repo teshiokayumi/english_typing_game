@@ -178,6 +178,11 @@ h1 {
   min-height: 2rem;
 }
 
+#japanese.error-text {
+  color: #ff4d4d;
+  font-weight: 600;
+}
+
 /* 遊び心のある演出 */
 .playing #focus-area {
   box-shadow: 0 0 60px rgba(79, 172, 254, 0.2);

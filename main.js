@@ -44,6 +44,7 @@
 
       wordList = data;
       DATA_URL = url;
+      japanese.classList.remove('error-text');
       japanese.textContent = 'データ読み込み完了！';
       target.textContent = 'Ready?';
 
@@ -58,7 +59,8 @@
 
     } catch (e) {
       console.error('Failed to load words:', e);
-      japanese.textContent = 'エラー: ' + e.message;
+      japanese.classList.add('error-text');
+      japanese.textContent = '読み込めませんでした';
       target.textContent = 'ERROR';
       wordList = [];
     }
