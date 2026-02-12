@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Junior High Typing - English Master</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <h1>English Typing</h1>
-  
+
   <div id="game-container">
+    <div id="setup-menu">
+      <div class="grade-selector">
+        <button class="grade-btn active"
+          data-url="https://raw.githubusercontent.com/teshiokayumi/english_typing_game/main/words.json">中1</button>
+        <button class="grade-btn"
+          data-url="https://raw.githubusercontent.com/teshiokayumi/english_typing_game/main/words2.json">中2</button>
+        <button class="grade-btn"
+          data-url="https://raw.githubusercontent.com/teshiokayumi/english_typing_game/main/words3.json">中3</button>
+      </div>
+
+      <div class="custom-url-container">
+        <input type="text" id="custom-url" placeholder="独自のJSON URLを入力">
+        <button id="load-custom">読込</button>
+      </div>
+    </div>
+
     <div id="focus-area">
       <div id="japanese">Ready to start?</div>
       <div id="target">English</div>
     </div>
 
     <button id="start-button">START GAME</button>
-    
+
     <div id="result"></div>
   </div>
 
   <script src="main.js"></script>
 </body>
+
 </html>
